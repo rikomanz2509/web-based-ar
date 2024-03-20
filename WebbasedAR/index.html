@@ -42,7 +42,7 @@
     <div class="buttons">
       <button class="say-hi-button">SAY HI!</button>
     </div>
-    <a-scene embedded arjs>
+    <a-scene embedded arjs arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
       <a-marker preset="hiro">
         <a-entity
           position="0 0 0"
@@ -59,6 +59,18 @@
           gltf-model="assets/magnemite/scene.gltf"
         ></a-entity>
       </a-marker>
+
+      <a-marker-camera type='pattern' url='assets/pattern-marker.patt'>
+        <a-marker preset="hiro">
+          <a-entity
+            position="0 0 0"
+            rotation="90 0 0"
+            scale="0.05 0.05 0.05"
+            gltf-model="assets/magnemite/scene.gltf"
+          ></a-entity>
+        </a-marker>
+
+      </a-marker-camera>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
